@@ -1,0 +1,9 @@
+<div *ngIf="messageService.messages.length"><!-- message envoyés par hero-service à message service-->
+  <h2>Messages</h2>
+  <button class="clear" (click)="messageService.clear()"><!--supprime les messages du tableau du service-->
+    Clear messages
+  </button>
+  <div *ngFor='let message of messageService.messages'> <!--map les messages du tableau du service-->
+    {{message}}
+  </div>  
+</div>
